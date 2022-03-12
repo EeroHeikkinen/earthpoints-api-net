@@ -424,9 +424,9 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <returns></returns>
-        void PlatformConnectionControllerCreate(Object body);
+        void PlatformConnectionControllerCreate(CreatePlatformConnectionDto createPlatformConnectionDto);
 
         /// <summary>
         /// 
@@ -435,9 +435,9 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PlatformConnectionControllerCreateWithHttpInfo(Object body);
+        ApiResponse<Object> PlatformConnectionControllerCreateWithHttpInfo(CreatePlatformConnectionDto createPlatformConnectionDto);
         /// <summary>
         /// 
         /// </summary>
@@ -586,9 +586,9 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <returns></returns>
-        void UserControllerCreate(Object body);
+        void UserControllerCreate(CreateUserDto createUserDto);
 
         /// <summary>
         /// 
@@ -597,9 +597,9 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UserControllerCreateWithHttpInfo(Object body);
+        ApiResponse<Object> UserControllerCreateWithHttpInfo(CreateUserDto createUserDto);
         /// <summary>
         /// 
         /// </summary>
@@ -1204,10 +1204,10 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PlatformConnectionControllerCreateAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task PlatformConnectionControllerCreateAsync(CreatePlatformConnectionDto createPlatformConnectionDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1216,10 +1216,10 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PlatformConnectionControllerCreateWithHttpInfoAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> PlatformConnectionControllerCreateWithHttpInfoAsync(CreatePlatformConnectionDto createPlatformConnectionDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1411,10 +1411,10 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UserControllerCreateAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UserControllerCreateAsync(CreateUserDto createUserDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1423,10 +1423,10 @@ namespace Org.OpenAPITools.Api
         /// 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UserControllerCreateWithHttpInfoAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UserControllerCreateWithHttpInfoAsync(CreateUserDto createUserDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -4449,25 +4449,25 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <returns></returns>
-        public void PlatformConnectionControllerCreate(Object body)
+        public void PlatformConnectionControllerCreate(CreatePlatformConnectionDto createPlatformConnectionDto)
         {
-            PlatformConnectionControllerCreateWithHttpInfo(body);
+            PlatformConnectionControllerCreateWithHttpInfo(createPlatformConnectionDto);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Object> PlatformConnectionControllerCreateWithHttpInfo(Object body)
+        public Org.OpenAPITools.Client.ApiResponse<Object> PlatformConnectionControllerCreateWithHttpInfo(CreatePlatformConnectionDto createPlatformConnectionDto)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'createPlatformConnectionDto' is set
+            if (createPlatformConnectionDto == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'body' when calling DefaultApi->PlatformConnectionControllerCreate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createPlatformConnectionDto' when calling DefaultApi->PlatformConnectionControllerCreate");
             }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -4492,7 +4492,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = createPlatformConnectionDto;
 
 
             // make the HTTP request
@@ -4513,27 +4513,27 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PlatformConnectionControllerCreateAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task PlatformConnectionControllerCreateAsync(CreatePlatformConnectionDto createPlatformConnectionDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await PlatformConnectionControllerCreateWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            await PlatformConnectionControllerCreateWithHttpInfoAsync(createPlatformConnectionDto, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createPlatformConnectionDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> PlatformConnectionControllerCreateWithHttpInfoAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> PlatformConnectionControllerCreateWithHttpInfoAsync(CreatePlatformConnectionDto createPlatformConnectionDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'createPlatformConnectionDto' is set
+            if (createPlatformConnectionDto == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'body' when calling DefaultApi->PlatformConnectionControllerCreate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createPlatformConnectionDto' when calling DefaultApi->PlatformConnectionControllerCreate");
             }
 
 
@@ -4559,7 +4559,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = createPlatformConnectionDto;
 
 
             // make the HTTP request
@@ -5625,25 +5625,25 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <returns></returns>
-        public void UserControllerCreate(Object body)
+        public void UserControllerCreate(CreateUserDto createUserDto)
         {
-            UserControllerCreateWithHttpInfo(body);
+            UserControllerCreateWithHttpInfo(createUserDto);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Object> UserControllerCreateWithHttpInfo(Object body)
+        public Org.OpenAPITools.Client.ApiResponse<Object> UserControllerCreateWithHttpInfo(CreateUserDto createUserDto)
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'createUserDto' is set
+            if (createUserDto == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'body' when calling DefaultApi->UserControllerCreate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createUserDto' when calling DefaultApi->UserControllerCreate");
             }
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -5668,7 +5668,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = createUserDto;
 
 
             // make the HTTP request
@@ -5689,27 +5689,27 @@ namespace Org.OpenAPITools.Api
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UserControllerCreateAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UserControllerCreateAsync(CreateUserDto createUserDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await UserControllerCreateWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            await UserControllerCreateWithHttpInfoAsync(createUserDto, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="createUserDto"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> UserControllerCreateWithHttpInfoAsync(Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> UserControllerCreateWithHttpInfoAsync(CreateUserDto createUserDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'body' is set
-            if (body == null)
+            // verify the required parameter 'createUserDto' is set
+            if (createUserDto == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'body' when calling DefaultApi->UserControllerCreate");
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'createUserDto' when calling DefaultApi->UserControllerCreate");
             }
 
 
@@ -5735,7 +5735,7 @@ namespace Org.OpenAPITools.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = createUserDto;
 
 
             // make the HTTP request

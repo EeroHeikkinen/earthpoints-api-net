@@ -1581,7 +1581,7 @@ No authorization required
 
 <a name="platformconnectioncontrollercreate"></a>
 # **PlatformConnectionControllerCreate**
-> void PlatformConnectionControllerCreate (Object body)
+> void PlatformConnectionControllerCreate (CreatePlatformConnectionDto createPlatformConnectionDto)
 
 
 
@@ -1602,11 +1602,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
             var apiInstance = new DefaultApi(config);
-            var body = null;  // Object | 
+            var createPlatformConnectionDto = new CreatePlatformConnectionDto(); // CreatePlatformConnectionDto | 
 
             try
             {
-                apiInstance.PlatformConnectionControllerCreate(body);
+                apiInstance.PlatformConnectionControllerCreate(createPlatformConnectionDto);
             }
             catch (ApiException  e)
             {
@@ -1623,7 +1623,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **Object**|  | 
+ **createPlatformConnectionDto** | [**CreatePlatformConnectionDto**](CreatePlatformConnectionDto.md)|  | 
 
 ### Return type
 
@@ -2180,7 +2180,7 @@ No authorization required
 
 <a name="usercontrollercreate"></a>
 # **UserControllerCreate**
-> void UserControllerCreate (Object body)
+> void UserControllerCreate (CreateUserDto createUserDto)
 
 
 
@@ -2201,11 +2201,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
             var apiInstance = new DefaultApi(config);
-            var body = null;  // Object | 
+            var createUserDto = new CreateUserDto(); // CreateUserDto | 
 
             try
             {
-                apiInstance.UserControllerCreate(body);
+                apiInstance.UserControllerCreate(createUserDto);
             }
             catch (ApiException  e)
             {
@@ -2222,7 +2222,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **Object**|  | 
+ **createUserDto** | [**CreateUserDto**](CreateUserDto.md)|  | 
 
 ### Return type
 
