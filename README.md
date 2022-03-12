@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UserControllerFindOneByEmail**](docs/DefaultApi.md#usercontrollerfindonebyemail) | **GET** /user/byEmail/{email} | 
 *DefaultApi* | [**UserControllerRemove**](docs/DefaultApi.md#usercontrollerremove) | **DELETE** /user/{id} | 
 *DefaultApi* | [**UserControllerUpdate**](docs/DefaultApi.md#usercontrollerupdate) | **PATCH** /user/{id} | 
+*DefaultApi* | [**UserControllerUserFromExternalPlatformData**](docs/DefaultApi.md#usercontrolleruserfromexternalplatformdata) | **POST** /user/fromExternalPlatformData | 
 
 
 <a name="documentation-for-models"></a>
@@ -154,6 +155,8 @@ Class | Method | HTTP request | Description
  - [Model.CreateUserDto](docs/CreateUserDto.md)
  - [Model.PointEvent](docs/PointEvent.md)
  - [Model.UpdatePointEventDto](docs/UpdatePointEventDto.md)
+ - [Model.User](docs/User.md)
+ - [Model.UserFromExternalPlatformDataDto](docs/UserFromExternalPlatformDataDto.md)
 
 
 <a name="documentation-for-authorization"></a>

@@ -39,20 +39,15 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePlatformConnectionDto" /> class.
         /// </summary>
-        /// <param name="userid">userid (required).</param>
+        /// <param name="userid">userid.</param>
         /// <param name="profileId">profileId (required).</param>
         /// <param name="platform">platform (required).</param>
-        /// <param name="emails">emails (required).</param>
-        /// <param name="authToken">authToken (required).</param>
-        /// <param name="tokenSecret">tokenSecret (required).</param>
-        /// <param name="authExpiration">authExpiration (required).</param>
+        /// <param name="emails">emails.</param>
+        /// <param name="authToken">authToken.</param>
+        /// <param name="tokenSecret">tokenSecret.</param>
+        /// <param name="authExpiration">authExpiration.</param>
         public CreatePlatformConnectionDto(string userid = default(string), string profileId = default(string), string platform = default(string), List<string> emails = default(List<string>), string authToken = default(string), string tokenSecret = default(string), DateTime authExpiration = default(DateTime))
         {
-            // to ensure "userid" is required (not null)
-            if (userid == null) {
-                throw new ArgumentNullException("userid is a required property for CreatePlatformConnectionDto and cannot be null");
-            }
-            this.Userid = userid;
             // to ensure "profileId" is required (not null)
             if (profileId == null) {
                 throw new ArgumentNullException("profileId is a required property for CreatePlatformConnectionDto and cannot be null");
@@ -63,20 +58,9 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("platform is a required property for CreatePlatformConnectionDto and cannot be null");
             }
             this.Platform = platform;
-            // to ensure "emails" is required (not null)
-            if (emails == null) {
-                throw new ArgumentNullException("emails is a required property for CreatePlatformConnectionDto and cannot be null");
-            }
+            this.Userid = userid;
             this.Emails = emails;
-            // to ensure "authToken" is required (not null)
-            if (authToken == null) {
-                throw new ArgumentNullException("authToken is a required property for CreatePlatformConnectionDto and cannot be null");
-            }
             this.AuthToken = authToken;
-            // to ensure "tokenSecret" is required (not null)
-            if (tokenSecret == null) {
-                throw new ArgumentNullException("tokenSecret is a required property for CreatePlatformConnectionDto and cannot be null");
-            }
             this.TokenSecret = tokenSecret;
             this.AuthExpiration = authExpiration;
         }
@@ -84,7 +68,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Userid
         /// </summary>
-        [DataMember(Name = "userid", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "userid", EmitDefaultValue = false)]
         public string Userid { get; set; }
 
         /// <summary>
@@ -102,25 +86,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Emails
         /// </summary>
-        [DataMember(Name = "emails", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "emails", EmitDefaultValue = false)]
         public List<string> Emails { get; set; }
 
         /// <summary>
         /// Gets or Sets AuthToken
         /// </summary>
-        [DataMember(Name = "auth_token", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "auth_token", EmitDefaultValue = false)]
         public string AuthToken { get; set; }
 
         /// <summary>
         /// Gets or Sets TokenSecret
         /// </summary>
-        [DataMember(Name = "token_secret", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "token_secret", EmitDefaultValue = false)]
         public string TokenSecret { get; set; }
 
         /// <summary>
         /// Gets or Sets AuthExpiration
         /// </summary>
-        [DataMember(Name = "auth_expiration", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "auth_expiration", EmitDefaultValue = false)]
         public DateTime AuthExpiration { get; set; }
 
         /// <summary>

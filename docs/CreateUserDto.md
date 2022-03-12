@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Userid** | **string** |  | 
-**FirstName** | **string** |  | 
-**Email** | **string** |  | 
-**Emails** | **List&lt;string&gt;** |  | 
-**Timezone** | **string** |  | 
-**CreatedAt** | **DateTime** |  | 
+**FirstName** | **string** |  | [optional] 
+**Email** | **string** |  | [optional] 
+**Emails** | **List&lt;string&gt;** |  | [optional] 
+**Timezone** | **string** |  | [optional] 
+**CreatedAt** | **DateTime** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

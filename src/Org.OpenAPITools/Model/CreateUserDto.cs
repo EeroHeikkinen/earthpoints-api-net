@@ -34,81 +34,48 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUserDto" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected CreateUserDto() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateUserDto" /> class.
-        /// </summary>
-        /// <param name="userid">userid (required).</param>
-        /// <param name="firstName">firstName (required).</param>
-        /// <param name="email">email (required).</param>
-        /// <param name="emails">emails (required).</param>
-        /// <param name="timezone">timezone (required).</param>
-        /// <param name="createdAt">createdAt (required).</param>
-        public CreateUserDto(string userid = default(string), string firstName = default(string), string email = default(string), List<string> emails = default(List<string>), string timezone = default(string), DateTime createdAt = default(DateTime))
+        /// <param name="firstName">firstName.</param>
+        /// <param name="email">email.</param>
+        /// <param name="emails">emails.</param>
+        /// <param name="timezone">timezone.</param>
+        /// <param name="createdAt">createdAt.</param>
+        public CreateUserDto(string firstName = default(string), string email = default(string), List<string> emails = default(List<string>), string timezone = default(string), DateTime createdAt = default(DateTime))
         {
-            // to ensure "userid" is required (not null)
-            if (userid == null) {
-                throw new ArgumentNullException("userid is a required property for CreateUserDto and cannot be null");
-            }
-            this.Userid = userid;
-            // to ensure "firstName" is required (not null)
-            if (firstName == null) {
-                throw new ArgumentNullException("firstName is a required property for CreateUserDto and cannot be null");
-            }
             this.FirstName = firstName;
-            // to ensure "email" is required (not null)
-            if (email == null) {
-                throw new ArgumentNullException("email is a required property for CreateUserDto and cannot be null");
-            }
             this.Email = email;
-            // to ensure "emails" is required (not null)
-            if (emails == null) {
-                throw new ArgumentNullException("emails is a required property for CreateUserDto and cannot be null");
-            }
             this.Emails = emails;
-            // to ensure "timezone" is required (not null)
-            if (timezone == null) {
-                throw new ArgumentNullException("timezone is a required property for CreateUserDto and cannot be null");
-            }
             this.Timezone = timezone;
             this.CreatedAt = createdAt;
         }
 
         /// <summary>
-        /// Gets or Sets Userid
-        /// </summary>
-        [DataMember(Name = "userid", IsRequired = true, EmitDefaultValue = false)]
-        public string Userid { get; set; }
-
-        /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
-        [DataMember(Name = "firstName", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "firstName", EmitDefaultValue = false)]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name = "email", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets Emails
         /// </summary>
-        [DataMember(Name = "emails", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "emails", EmitDefaultValue = false)]
         public List<string> Emails { get; set; }
 
         /// <summary>
         /// Gets or Sets Timezone
         /// </summary>
-        [DataMember(Name = "timezone", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "timezone", EmitDefaultValue = false)]
         public string Timezone { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "createdAt", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "createdAt", EmitDefaultValue = false)]
         public DateTime CreatedAt { get; set; }
 
         /// <summary>
@@ -119,7 +86,6 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CreateUserDto {\n");
-            sb.Append("  Userid: ").Append(Userid).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
@@ -161,11 +127,6 @@ namespace Org.OpenAPITools.Model
             }
             return 
                 (
-                    this.Userid == input.Userid ||
-                    (this.Userid != null &&
-                    this.Userid.Equals(input.Userid))
-                ) && 
-                (
                     this.FirstName == input.FirstName ||
                     (this.FirstName != null &&
                     this.FirstName.Equals(input.FirstName))
@@ -202,10 +163,6 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Userid != null)
-                {
-                    hashCode = (hashCode * 59) + this.Userid.GetHashCode();
-                }
                 if (this.FirstName != null)
                 {
                     hashCode = (hashCode * 59) + this.FirstName.GetHashCode();

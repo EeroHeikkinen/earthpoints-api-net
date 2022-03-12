@@ -674,6 +674,24 @@ namespace Org.OpenAPITools.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UserControllerUpdateWithHttpInfo(string id, Object body);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <returns>User</returns>
+        User UserControllerUserFromExternalPlatformData(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <returns>ApiResponse of User</returns>
+        ApiResponse<User> UserControllerUserFromExternalPlatformDataWithHttpInfo(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto);
         #endregion Synchronous Operations
     }
 
@@ -1521,6 +1539,29 @@ namespace Org.OpenAPITools.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UserControllerUpdateWithHttpInfoAsync(string id, Object body, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of User</returns>
+        System.Threading.Tasks.Task<User> UserControllerUserFromExternalPlatformDataAsync(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (User)</returns>
+        System.Threading.Tasks.Task<ApiResponse<User>> UserControllerUserFromExternalPlatformDataWithHttpInfoAsync(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -6284,6 +6325,154 @@ namespace Org.OpenAPITools.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserControllerUpdate", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <returns>User</returns>
+        public User UserControllerUserFromExternalPlatformData(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto)
+        {
+            Org.OpenAPITools.Client.ApiResponse<User> localVarResponse = UserControllerUserFromExternalPlatformDataWithHttpInfo(userFromExternalPlatformDataDto);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <returns>ApiResponse of User</returns>
+        public Org.OpenAPITools.Client.ApiResponse<User> UserControllerUserFromExternalPlatformDataWithHttpInfo(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto)
+        {
+            // verify the required parameter 'userFromExternalPlatformDataDto' is set
+            if (userFromExternalPlatformDataDto == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'userFromExternalPlatformDataDto' when calling DefaultApi->UserControllerUserFromExternalPlatformData");
+            }
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = userFromExternalPlatformDataDto;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<User>("/user/fromExternalPlatformData", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserControllerUserFromExternalPlatformData", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of User</returns>
+        public async System.Threading.Tasks.Task<User> UserControllerUserFromExternalPlatformDataAsync(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Org.OpenAPITools.Client.ApiResponse<User> localVarResponse = await UserControllerUserFromExternalPlatformDataWithHttpInfoAsync(userFromExternalPlatformDataDto, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userFromExternalPlatformDataDto"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (User)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<User>> UserControllerUserFromExternalPlatformDataWithHttpInfoAsync(UserFromExternalPlatformDataDto userFromExternalPlatformDataDto, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userFromExternalPlatformDataDto' is set
+            if (userFromExternalPlatformDataDto == null)
+            {
+                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'userFromExternalPlatformDataDto' when calling DefaultApi->UserControllerUserFromExternalPlatformData");
+            }
+
+
+            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = userFromExternalPlatformDataDto;
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<User>("/user/fromExternalPlatformData", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserControllerUserFromExternalPlatformData", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

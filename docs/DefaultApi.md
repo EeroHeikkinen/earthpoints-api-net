@@ -42,6 +42,7 @@ Method | HTTP request | Description
 [**UserControllerFindOneByEmail**](DefaultApi.md#usercontrollerfindonebyemail) | **GET** /user/byEmail/{email} | 
 [**UserControllerRemove**](DefaultApi.md#usercontrollerremove) | **DELETE** /user/{id} | 
 [**UserControllerUpdate**](DefaultApi.md#usercontrollerupdate) | **PATCH** /user/{id} | 
+[**UserControllerUserFromExternalPlatformData**](DefaultApi.md#usercontrolleruserfromexternalplatformdata) | **POST** /user/fromExternalPlatformData | 
 
 
 <a name="appcontrollercreate"></a>
@@ -2512,6 +2513,77 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="usercontrolleruserfromexternalplatformdata"></a>
+# **UserControllerUserFromExternalPlatformData**
+> User UserControllerUserFromExternalPlatformData (UserFromExternalPlatformDataDto userFromExternalPlatformDataDto)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class UserControllerUserFromExternalPlatformDataExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure OAuth2 access token for authorization: oauth2
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DefaultApi(config);
+            var userFromExternalPlatformDataDto = new UserFromExternalPlatformDataDto(); // UserFromExternalPlatformDataDto | 
+
+            try
+            {
+                User result = apiInstance.UserControllerUserFromExternalPlatformData(userFromExternalPlatformDataDto);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DefaultApi.UserControllerUserFromExternalPlatformData: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userFromExternalPlatformDataDto** | [**UserFromExternalPlatformDataDto**](UserFromExternalPlatformDataDto.md)|  | 
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
